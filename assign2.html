@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #nav{
+        background-color: yellow;
+       }
+       #left{
+        background-color: red;
+       }
+       #ss{
+          display: grid;
+          gap: 20px;
+          grid-template-columns: repeat(2,1fr);
+          height: 300px;
+         
+       }
+       #right{
+        display: grid;
+        width: 100%;
+        row-gap:20px;
+        grid-template-rows: repeat(3,1fr);
+        
+       }
+       #right div{
+        background-color: rgb(0, 255, 81);
+       }
+       
+       @media all and (min-width:360px) and (max-width:480px){
+        #ss{
+            grid-template-columns: repeat(1,1fr);
+        }
+        #right{
+            grid-template-columns: repeat(1,1fr);
+        }
+       }
+       @media all and (min-width:481px) and (max-width:768px){
+        #ss{
+            grid-template-columns: repeat(1,1fr);
+        }
+        #right{
+            
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px 20px;
+            height: 100px;
+        
+        }
+       }
+       @media all and (min-width:769px) and (max-width:1024px){
+        #ss{
+            grid-template-columns: repeat(2,1fr);
+        }
+       }
+      
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <h1>NAVIGATION</h1>
+    </div>
+    <div id="ss">
+        <div id="left"><h2>Left Box</h2></div>
+        <div id="right">
+            <div><p>Box-1</p></div>
+            <div><p>Box-2</p></div>
+            <div><p>Box-3</p></div>
+            
+        </div>
+    </div>
+</body>
+</html>
